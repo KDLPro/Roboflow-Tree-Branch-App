@@ -168,6 +168,11 @@ class MainWindow(QMainWindow):
         self.file_menu.addAction(self.open_img_but)
         self.file_menu.addAction(self.save_img_but)
 
+        self.centralwidget = QWidget(self)
+        self.loading = QLabel("No image loaded...", self.centralwidget)
+        self.loading.setAlignment(Qt.AlignCenter)
+        self.setCentralWidget(self.loading)
+
         self.open_img_but.triggered.connect(self.open_file)
         self.save_img_but.triggered.connect(self.save_file)
 

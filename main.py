@@ -8,7 +8,10 @@ import sys
 if __name__ == "__main__":
     # Loading Screen
     App = QApplication(sys.argv)
-    App.setStyleSheet('''
+    window = app.MainWindow()
+    
+    splash = app.SplashScreen(window)
+    splash.setStyleSheet('''
         #LabelTitle {
             font-size: 60px;
             color: #93deed;
@@ -43,12 +46,8 @@ if __name__ == "__main__":
             background-color: qlineargradient(spread:pad x1:0, x2:1, y1:0.511364, y2:0.523, stop:0 #b6ffb4, stop:1 #006e2b);
         }
     ''')
-    
-    window = app.MainWindow()
-    
-    splash = app.SplashScreen(window)
     splash.show()
-
+    
     app.setStyleSheet("")
     
     sys.exit(App.exec())
