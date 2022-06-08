@@ -48,8 +48,6 @@ if __name__ == "__main__":
     ''')
     splash.show()
     
-    app.setStyleSheet("")
-    
     sys.exit(App.exec())
 
 
