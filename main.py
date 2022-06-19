@@ -1,52 +1,61 @@
 from PySide6.QtWidgets import * 
 from PySide6.QtCore import *
 from PySide6.QtGui import *
+
 import app
 import sys
+import os
 
 
 if __name__ == "__main__":
+    # Delete pycache image files
+    try:
+        os.remove("__pycache__/copy1.png")
+        os.remove("__pycache__/copy2.png")
+        os.remove("__pycache__/copy3.png")
+        os.remove("__pycache__/disp.png")
+    except:
+        pass
+
     # Loading Screen
     App = QApplication(sys.argv)
     window = app.MainWindow()
-    
-    splash = app.SplashScreen(window)
-    splash.setStyleSheet('''
-        #LabelTitle {
-            font-size: 60px;
-            color: #93deed;
+    window.setStyleSheet('''
+        #MainMenu {
+            font-style: Arial;
+            font-size: 10pt;
+            background-color: #8cd1f7;;
+        }
+        
+        #FileSelection {
+            font-style: Arial;
+            font-size: 9pt;
         }
 
-        #LabelDesc {
-            font-size: 30px;
-            color: #edfbff;
+        #FileMenu {
+            background-color: #ffd773;
+            selection-background-color: #ffe5b9;
+            color: #634700;
         }
 
-        #LabelLoading {
-            font-size: 30px;
-            color: #e8e8eb;
+        #ModelMenu {
+            background-color: #ffa06d;
+            selection-background-color: #ffe1c3;
+            color: #634700;
         }
 
-        QFrame {
-            background-color: #2F4454;
-            color: rgb(220, 220, 220);
+        #PredictMenu {
+            background-color: #a87bff;
+            selection-background-color: #dfcaff;
+            color: #634700;
         }
 
-        QProgressBar {
-            background-color: #366910;
-            color: rgb(200, 200, 200);
-            border-style: none;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 30px;
-        }
-
-        QProgressBar::chunk {
-            border-radius: 10px;
-            background-color: qlineargradient(spread:pad x1:0, x2:1, y1:0.511364, y2:0.523, stop:0 #b6ffb4, stop:1 #006e2b);
+        #FileSubSelection {
+            background-color: #c2de24;
+            selection-background-color: #f2ffb5;
+            color: #634700;
         }
     ''')
-    splash.show()
     
     sys.exit(App.exec())
 
