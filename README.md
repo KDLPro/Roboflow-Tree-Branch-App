@@ -54,9 +54,10 @@ If no CUDA Device is found at app startup, the app uses the CPU instead to gener
     <img src="Documentation/model-menu.png" width="800"/>
 </object>
 
+- After loading the image and model, the predictions can be made on the loaded image by clicking on <span style="color:yellow">Predict</span> > <span style="color:yellowgreen">Do Prediction</span> or using the shortcut <span style="color:lime">Ctrl + R</span>.
 
+<object data="[URL_to_preferred_image.png](https://github.com/KDLPro/YOLOv5-Tree-Branch-App/Documentation/predict-menu.png)" type="image/png" width="800">
+    <img src="Documentation/predict-menu.png" width="800"/>
+</object>
 
-
-
-
-
+- After creating the predictions, you can save the predictions as image by going to <span style="color:yellow">File</span> > <span style="color:yellowgreen">Save Predictions as Image</span> or using the shortcut <span style="color:lime">Ctrl + S</span>. Images can be saved in the following formats: [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics), [BMP](https://en.wikipedia.org/wiki/BMP_file_format), [JPEG or JPG](https://en.wikipedia.org/wiki/JPEG).

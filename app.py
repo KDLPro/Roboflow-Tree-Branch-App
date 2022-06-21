@@ -602,9 +602,8 @@ class MainWindow(QMainWindow, DetectionApp):
         self.save_dialog.setFilter(self.save_dialog.filter() | QDir.Hidden)
         self.save_dialog.setDefaultSuffix('png')
         self.save_dialog.setAcceptMode(QFileDialog.AcceptSave)
-        save_filters = ["Portable Network Graphics (*.png)", "Graphic Interchange Format (*.gif)",
-                        "Joint Photographic Experts Group (*.jpg)", "Joint Photographic Experts Group (*.jpeg)",
-                        "Windows Bitmap (*.bmp)"]
+        save_filters = ["Portable Network Graphics (*.png)", "Joint Photographic Experts Group (*.jpg)", 
+                        "Joint Photographic Experts Group (*.jpeg)", "Windows Bitmap (*.bmp)"]
         self.save_dialog.setNameFilters(save_filters)
         if self.save_dialog.exec_() == QDialog.Accepted:
             self.target_image = self.save_dialog.selectedFiles()
