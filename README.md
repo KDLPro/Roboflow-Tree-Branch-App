@@ -32,10 +32,29 @@ python main.py
 
 ## How to Use the App
 
-You can load an image to be used for inference by clicking on <span style="color:yellow">File</span> > <span style="color:yellowgreen">Open Image</span>
-or using the shortcut <span style="color:lime">Ctrl + S</span>.
+- To load an image to be used for inference, click on <span style="color:yellow">File</span> > <span style="color:yellowgreen">Open Image</span>
+or using the shortcut <span style="color:lime">Ctrl + O</span>.
 
-<img width="800" src="Documentation/file-menu.png" onerror="this.src='https://github.com/KDLPro/YOLOv5-Tree-Branch-App/Documentation/Documentation/file-menu.png'" />
+<object data="[URL_to_preferred_image.png](https://github.com/KDLPro/YOLOv5-Tree-Branch-App/Documentation/file-menu.png)" type="image/png" width="800">
+    <img src="Documentation/file-menu.png" width="800"/>
+</object>
+
+- To load a YOLOv5 model to be used for inference, go to <span style="color:yellow">Model</span> > <span style="color:yellowgreen">Load Model</span>
+or using the shortcut <span style="color:lime">Ctrl + L</span>.
+
+- Selecting a CUDA Device to be used for generating predictions can be done by going to <span style="color:yellow">Model</span> > <span style="color:yellowgreen">Set CUDA Device</span> and select the CUDA Device to be used. The app loads the CUDA device in the following order:
+  - Selected CUDA Device
+  - CUDA Device 0 if the selected CUDA Device does not exist.
+  - CPU if no CUDA Device exists.
+
+- When the app starts, it automatically uses CUDA Device 0. 
+If no CUDA Device is found at app startup, the app uses the CPU instead to generate predictions.
+
+<object data="[URL_to_preferred_image.png](https://github.com/KDLPro/YOLOv5-Tree-Branch-App/Documentation/model-menu.png)" type="image/png" width="800">
+    <img src="Documentation/model-menu.png" width="800"/>
+</object>
+
+
 
 
 
